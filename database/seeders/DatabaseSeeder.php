@@ -22,16 +22,9 @@ class DatabaseSeeder extends Seeder
             ['name' => 'Test User', 'password' => bcrypt('password')]
         );
 
-        \App\Models\Post::create([
-            'title'       => 'Post Pertama (Draft)',
-            'description' => 'Ini adalah postingan contoh dengan status draft.',
-            'status'      => 'draft',
-        ]);
-
-        \App\Models\Post::create([
-            'title'       => 'Post Kedua (Published)',
-            'description' => 'Ini adalah postingan contoh dengan status published.',
-            'status'      => 'published',
+        $this->call([
+            PostTableSeeder::class,
+            PostRandomTableSeeder::class,
         ]);
     }
 }
