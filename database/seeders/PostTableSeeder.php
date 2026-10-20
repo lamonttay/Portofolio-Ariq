@@ -15,8 +15,9 @@ class PostTableSeeder extends Seeder
     {
         for ($i = 1; $i <= 10; $i++) {
             Post::create([
-                'title'       => 'Post Judul Ke-' . $i,
-                'description' => 'Deskripsi untuk post judul ke-' . $i,
+                'title'       => fake()->sentence(4),
+                'description' => fake()->paragraph(),
+                'status'      => 'published',
             ]);
         }
     }

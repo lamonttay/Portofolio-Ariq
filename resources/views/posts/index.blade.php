@@ -55,12 +55,6 @@
         </tbody>
     </table>
 
-    <div class="mt-4 text-sm text-gray-600">
-        Halaman : {{ $posts->currentPage() }} <br>
-        Jumlah Data : {{ $posts->total() }} <br>
-        Data Per Halaman : {{ $posts->perPage() }}
-    </div>
-
     <div class="mt-4">
         {{ $posts->links() }}
     </div>

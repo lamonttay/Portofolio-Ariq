@@ -59,6 +59,9 @@
             margin-top: 14px;
             border-top: 1px solid #f1f5f9;
         }
+        nav[role="navigation"] > div:first-child {
+            display: none !important;
+        }
         nav[role="navigation"] a,
         nav[role="navigation"] span[aria-current="page"] span,
         nav[role="navigation"] span[aria-disabled="true"] span {
