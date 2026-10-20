@@ -11,15 +11,17 @@ class PostController extends Controller
      * Display a listing of the resource.
      */
     public function index(Request $request)
-{
-    if ($request->query('status') === 'published') {
-        $posts = Post::published()->get();
-    } else {
-        $posts = Post::all();
-    }
+    {
+        $query = Post::orderBy('created_at', 'desc');
 
-    return view('posts.index', compact('posts'));
-}
+        if ($request->query('status') === 'published') {
+            $query->published();
+        }
+
+        $posts = $query->paginate(10)->withQueryString();
+
+        return view('posts.index', compact('posts'));
+    }
 
     /**
      * Show the form for creating a new resource.

@@ -1,6 +1,6 @@
 <nav>
     <div class="logo">
-        <a href="{{ route('home') }}" style="color: white; font-weight: bold;">Portofolio - Ariq</a>
+        <a href="{{ route('home') }}" style="color: white; font-weight: bold;">MyPortofolio</a>
     </div>
     <ul>
         <li><a href="{{ route('home') }}">Home</a></li>
